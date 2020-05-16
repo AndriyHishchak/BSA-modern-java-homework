@@ -9,7 +9,7 @@ public final class AttackSubsystemImpl implements AttackSubsystem {
 	public static AttackSubsystemImpl construct(String name, PositiveInteger powergridRequirments,
 			PositiveInteger capacitorConsumption, PositiveInteger optimalSpeed, PositiveInteger optimalSize,
 			PositiveInteger baseDamage) throws IllegalArgumentException {
-		// TODO: Ваш код здесь :)
+
 		return null;
 	}
 
@@ -27,7 +27,8 @@ public final class AttackSubsystemImpl implements AttackSubsystem {
 
 	@Override
 	public PositiveInteger attack(Attackable target) {
-		// TODO: Ваш код здесь :)
+		int sizeReductionModifier = target.getSize().value() >= 1/*optimal Size*/ ? 1 : target.getSize().value() / 2/*optimalSize*/;
+
 		return null;
 	}
 

@@ -21,7 +21,7 @@ public final class DockedShipBuilder {
 	private PositiveInteger size;
 
 	public static DockedShipBuilder named(String name) {
-		var builder = new DockedShipBuilder();
+		DockedShipBuilder builder = new DockedShipBuilder();
 
 		builder.speed = PositiveInteger.of(1);
 		builder.size = PositiveInteger.of(1);
@@ -62,7 +62,7 @@ public final class DockedShipBuilder {
 	}
 
 	public DockedShipBuilder speed(Integer speed) {
-		this.size = PositiveInteger.of(speed);
+		this.speed = PositiveInteger.of(speed);
 		return this;
 	}
 

@@ -1,6 +1,7 @@
 package com.binary_studio.fleet_commander.core.subsystems;
 
 import com.binary_studio.fleet_commander.core.common.PositiveInteger;
+import com.binary_studio.fleet_commander.core.subsystems.contract.AttackSubsystem;
 
 public final class AttackSubsystemBuilder {
 
@@ -17,7 +18,7 @@ public final class AttackSubsystemBuilder {
 	private PositiveInteger pgRequirement;
 
 	public static AttackSubsystemBuilder named(String name) {
-		var builder = new AttackSubsystemBuilder();
+		AttackSubsystemBuilder builder = new AttackSubsystemBuilder();
 		builder.name = name;
 
 		return builder;

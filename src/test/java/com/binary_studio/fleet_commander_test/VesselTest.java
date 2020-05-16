@@ -189,7 +189,7 @@ public class VesselTest {
 
 			ship.startTurn();
 			// assert that don't regenerate over cap
-			var emptyRegen = ship.regenerate();
+			Optional<RegenerateAction> emptyRegen = ship.regenerate();
 			assertTrue(emptyRegen.isPresent(), "Should regenerate");
 			assertEquals(0, emptyRegen.get().hullHPRegenerated.value(), "Should regen hull correctly");
 			assertEquals(0, emptyRegen.get().shieldHPRegenerated.value(), "Should regen shield correctly");
